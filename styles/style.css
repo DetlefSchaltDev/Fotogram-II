@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(13, 50, 64);
+}
+
+header, main {
+    box-shadow:  rgb(247, 249, 250) 0px 5px 16px -5px;
+}
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(33, 70, 84);
+    
+}
+
+h1 {
+    font-size: 48px;
+    padding: 24px 24px;
+    color: whitesmoke;
+}
+
+.headerlogo {
+    width: 320px;
+    padding: 32px;
+}
+
+.main_content {
+    /*border: solid gold 1px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    padding: 48px 48px;
+}
+
+.photo {
+    border: solid 2px rgb(255, 210, 48);
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+}
+
+.photo:hover {
+    border: solid 3px rgb(245, 78, 134);
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.d_none {
+            display: none;
+        }
+
+        .dialog_background { 
+           position: fixed;
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1;
+        }
+
+        .dialog {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+           
+        }
+
+        .dialog_content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            background-color: rgb(13, 50, 64);
+            box-shadow: 0 4px 8px 0 rgba(255,255,255,0.364);
+            border: solid 2px #a0f0fd;
+            border-radius: 8px;
+            padding: 16px;
+        }
+
+        .dialog_image {
+            width: 640px;
+            height: auto;
+        }
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    height: 25%;
+}
