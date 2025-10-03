@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Coiny-Regular;
+  src: url(../assets/fonts/Coiny/Coiny-Regular.ttf);
+}
+
+@font-face {
+  font-family: Montserrat-VariableFont;
+  src: url(../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -16,8 +26,6 @@ header, main {
     box-shadow:  rgb(247, 249, 250) 0px 5px 16px -5px;
 }
 
-
-
 main {
     display: flex;
     flex-direction: column;
@@ -27,9 +35,20 @@ main {
 }
 
 h1 {
-    font-size: 48px;
-    padding: 24px 24px;
+    font-family: Montserrat-VariableFont;
+    font-size: 3em;
+    text-align: center;
+    border-radius: 1em;
     color: white;
+}
+
+figcaption{
+    font-family: Montserrat-VariableFont;
+    color: white;
+    margin-top: 16px;
+    hyphens: auto; 
+	text-align: justify;
+    width: 640px;
 }
 
 .headerlogo {
@@ -74,12 +93,13 @@ h1 {
 }
 
 .dialog {
+    margin-top: 5%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
+    
     
 }
 
@@ -87,18 +107,53 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 24px;
     background-color: rgb(13, 50, 64);
     box-shadow: 0 4px 8px 0 rgba(255,255,255,0.364);
     border: solid 2px #a0f0fd;
     border-radius: 8px;
     padding: 16px;
+    height: 800px;
+}
+
+.image_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 720px;
 }
 
 .dialog_image {
+    border: solid 2px #a0f0fd;
     width: 640px;
     height: auto;
+    border-radius: 8px;
 }
+
+.dialog_footer{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.dialog_button{
+    border: solid 2px rgb(160, 240, 253);
+    padding: 8px;
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 210, 48);
+    font-family: Montserrat-VariableFont;
+    font-weight: bolder;
+}
+/*
+.close_button{
+    font-size: 2em;
+    background-color:rgb(67, 25, 125);
+    color:rgb(255,255,255)
+}
+*/
 
 footer {
     display: flex;
@@ -109,4 +164,34 @@ footer {
     width: 100%;
     padding-top: 24px;
     padding-bottom: 24px;
+    color: white;
+}
+
+.tooltip {
+  position: relative;
+  display: flex;
+  align-items:flex-start;
+  justify-content: center;
+  border-bottom: 1px dotted black; /* Add dots under the hoverable text */
+  cursor: pointer;
+}
+
+/* Tooltip text */
+.tooltiptext {
+    border: solid 2px rgb(255, 210, 48);;
+  box-shadow: 5px 5px 15px -2px #000000;
+  visibility: hidden; /* Hidden by default */
+  width: 130px;
+  background-color: rgb(13, 50, 64);
+  color: #ffffff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 8px;
+  position: absolute;
+  z-index: 2; /* Ensure tooltip is displayed above content */
+}
+
+/* Show the tooltip text on hover */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
