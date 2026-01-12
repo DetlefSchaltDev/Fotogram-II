@@ -22,16 +22,13 @@ body {
     background-color: rgb(13, 50, 64);
 }
 
-header, main {
-    box-shadow:  rgb(247, 249, 250) 0px 5px 16px -5px;
-}
-
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgb(33, 70, 84);
     min-height: calc(100vh - 183px);
+    padding-top: 16px;
 }
 
 h1 {
@@ -80,8 +77,15 @@ figcaption{
 }
 
 .d_none {
-            display: none;
-        }
+    display: none;
+}
+
+.image_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
 
 .dialog_background { 
     position: fixed;
@@ -99,7 +103,7 @@ figcaption{
     justify-content: center;
     align-items: center;
     width: 100%;
-    
+    padding: 16px;
     
 }
 
@@ -116,7 +120,7 @@ figcaption{
     height: 800px;
 }
 
-.image_wrapper{
+.image_wrapper_dialog {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -167,20 +171,21 @@ footer {
     color: white;
 }
 
+/*
 .tooltip {
   position: relative;
   display: flex;
   align-items:flex-start;
   justify-content: center;
-  border-bottom: 1px dotted black; /* Add dots under the hoverable text */
+  border-bottom: 1px dotted black; 
   cursor: pointer;
 }
 
-/* Tooltip text */
+
 .tooltiptext {
     border: solid 2px rgb(255, 210, 48);;
   box-shadow: 5px 5px 15px -2px #000000;
-  visibility: hidden; /* Hidden by default */
+  visibility: hidden; 
   width: 130px;
   background-color: rgb(13, 50, 64);
   color: #ffffff;
@@ -188,10 +193,10 @@ footer {
   padding: 5px 0;
   border-radius: 8px;
   position: absolute;
-  z-index: 2; /* Ensure tooltip is displayed above content */
+  z-index: 2; 
 }
 
-/* Show the tooltip text on hover */
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+*/
